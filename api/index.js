@@ -21,8 +21,12 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
+/* 
+El force en true nos resetea y limpia la base de datos.
+El force en false, nos permite dejar la informacion de la base de datos que le cargamos con el post
+*/
