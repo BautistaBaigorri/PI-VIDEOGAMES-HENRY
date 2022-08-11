@@ -62,7 +62,7 @@ router.get("/:idVideogame", async (req, res) => {
 
 //TODO  ------> POST /videogame <-------
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   let { name, description, releaseDate, rating, genres, platforms } = req.body;
   platforms = platforms.join(", ");
   try {
@@ -77,11 +77,12 @@ router.post("/", async (req, res) => {
       },
     });
     await gameCreated[0].setGenres(genres); // relaciono ID genres al juego creado
+    res.send("Created succesfully, saludos desde el BACK!!");
   } catch (err) {
-    console.log(err);
+    next(err);
   }
-  res.send("Created succesfully, saludos desde el BACK!!");
 });
+
 
 module.exports = router;
 
