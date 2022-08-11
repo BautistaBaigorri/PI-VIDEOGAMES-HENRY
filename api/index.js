@@ -28,5 +28,5 @@ conn.sync({ force: false }).then(() => {
 });
 /* 
 El force en true nos resetea y limpia la base de datos.
-El force en false, nos permite dejar la informacion de la base de datos que le cargamos con el post
+El force en false, nos permite dejar la informacion de la base de datos que le cargamos con el post.
 */
