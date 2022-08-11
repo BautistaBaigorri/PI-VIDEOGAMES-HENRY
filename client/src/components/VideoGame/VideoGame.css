@@ -1,0 +1,87 @@
+.container-game {
+  flex-wrap: wrap;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #2b86c5 0%, #ff3cac 100%);
+  box-shadow: 5px 5px 3px #c5c5c5, -5px -5px 3px #ffffff;
+}
+
+.container-game:hover {
+  animation: myAnim 1s ease 0s 1 normal forwards;
+  cursor: pointer;
+}
+
+.game-div {
+  display: flex;
+  margin: 10px;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+}
+
+.game-div img {
+  object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+}
+
+.title-game {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: x-large;
+  font-weight: 600;
+  color: black;
+}
+
+.infoContGenres {
+  display: flex;
+  justify-content: center;
+}
+
+.infoRating {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+}
+
+.div-button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.Link {
+  font-family: "Press Start 2P";
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 3px 2px 3px 1px #1e7ab8;
+  background-color: black;
+  color: #ff3cac;
+}
+
+.Link:hover {
+  background-color: #ff3cac;
+  color: black;
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,18 @@
+.navbar-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar-div button {
+  font-family: "Press Start 2P";
+  padding: 10px;
+  margin: 20px;
+  border-radius: 30px;
+  background-color: #ff3caa;
+}
+
+.navbar-div button:hover {
+  background-color: black;
+  color: #ff3cac;
+}
