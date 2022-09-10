@@ -13,8 +13,10 @@ function GameDetails(props) {
   // me carga los details del juego
   useEffect(() => {
     getVideogameDetail(idVideogame);
-    return () => {clearDetails()}
-  }, [idVideogame]);
+    return () => {
+      clearDetails();
+    };
+  }, [idVideogame, getVideogameDetail, clearDetails]);
 
   return (
     <div className="container-detail">
