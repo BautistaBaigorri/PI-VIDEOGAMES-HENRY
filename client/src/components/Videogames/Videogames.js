@@ -35,7 +35,7 @@ function Videogames({ allGames, getAllGames, getGenres }) {
   useEffect(() => {
     getAllGames();
     getGenres();
-  }, []);
+  }, [getAllGames, getGenres]);
 
   return (
     <div className="container">
